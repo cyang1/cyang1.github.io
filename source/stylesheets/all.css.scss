@@ -78,6 +78,6 @@ $tapeHeight: 60px;
 
   &.under-construction {
     @include transform(rotate(-8deg));
-    top: 280px;
+    top: 30%;
   }
 }
