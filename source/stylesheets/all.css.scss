@@ -1,0 +1,83 @@
+@import "normalize";
+@import "html5_boilerplate";
+@import "compass";
+
+// Sticky Footer
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -40px;
+}
+
+footer {
+  margin: 0;
+  height: 40px;
+}
+
+body {
+  background: #d4d4d4 url("../images/background.png");
+  text-align: center;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+p {
+  margin: 0 auto 5px;
+  color: rgba(0, 0, 0, .3);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  font-size: 14px;
+}
+
+a {
+  color: rgba(0, 0, 0, .3);
+  @include transition(color 100ms ease-in);
+}
+
+a:visited {
+  color: inherit;
+} 
+
+a:hover, a:active {
+  color: #666;
+}
+
+$tapeHeight: 60px;
+
+.tape {
+  position: absolute;
+  background-color: yellow;
+  @include background-size(2*$tapeHeight $tapeHeight);
+  @include background-image(linear-gradient(-45deg,
+                            black 33%,
+                            yellow 33%,
+                            yellow 67%,
+                            black 67%,
+                            black));
+  box-shadow: 0 1px 5px rgba(black, 0.5);
+  height: $tapeHeight;
+  width: 200%;
+  left: -50%;
+
+  h1 {
+    display: inline-block;
+    background: yellow;
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 8px;
+  }
+
+  &.under-construction {
+    @include transform(rotate(-8deg));
+    top: 280px;
+  }
+}

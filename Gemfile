@@ -15,5 +15,5 @@ platforms :mri_18 do
   gem "ruby18_source_location"
 end
 
-# For publishing to Github Pages
-gem 'middleman-gh-pages'
+# Fast deploying to Github
+gem "middleman-deploy"
