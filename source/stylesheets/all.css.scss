@@ -64,6 +64,7 @@ $tapeHeight: 60px;
   height: $tapeHeight;
   width: 200%;
   left: -50%;
+  -webkit-backface-visibility: hidden;
 
   h1 {
     display: inline-block;
